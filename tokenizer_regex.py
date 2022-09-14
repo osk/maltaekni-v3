@@ -1,5 +1,6 @@
+# pylint: disable=missing-module-docstring,missing-function-docstring
+
 import re
-from string import punctuation
 
 
 WORD = 1
@@ -13,11 +14,11 @@ KNOWN_ABBREVIATIONS = ["t.d.", "m.a.", "þ.á.m.", "þ.á m."]
 CHARS_IN_WORD = "aábcdðeéfghiíjklmnoóprstuúvxyýþæöwzùåäqêà"
 
 
-def matches(i: str, r: re.Pattern):
-    matches = re.match(r, i)
+def matches(i: str, regex_pattern: re.Pattern):
+    str_match = re.match(regex_pattern, i)
 
-    if matches:
-        return matches.group(0)
+    if str_match:
+        return str_match.group(0)
     return None
 
 

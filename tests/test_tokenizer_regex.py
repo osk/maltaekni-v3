@@ -91,7 +91,8 @@ def test_word_ends_with_dash():
 
 
 def test_given_text():
-    test_input = "Jón hefur m.a. starfað t.d. sem gítar- og píanókennari, þ.á m. hjá Ice-Music, frá árinu 1999."
+    test_input = """Jón hefur m.a. starfað t.d. sem gítar- og
+    píanókennari, þ.á m. hjá Ice-Music, frá árinu 1999."""
     output = [
         "Jón",
         "hefur",
